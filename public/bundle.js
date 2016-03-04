@@ -63,7 +63,7 @@
 	
 	var _routes2 = _interopRequireDefault(_routes);
 	
-	var _Footer = __webpack_require__(/*! ./components/Footer */ 220);
+	var _Footer = __webpack_require__(/*! ./components/Footer */ 222);
 	
 	var _Footer2 = _interopRequireDefault(_Footer);
 	
@@ -25398,19 +25398,19 @@
 	
 	var _Main2 = _interopRequireDefault(_Main);
 	
-	var _Page = __webpack_require__(/*! ../components/Page1 */ 221);
+	var _Page = __webpack_require__(/*! ../components/Page1 */ 218);
 	
 	var _Page2 = _interopRequireDefault(_Page);
 	
-	var _Page3 = __webpack_require__(/*! ../components/Page2 */ 222);
+	var _Page3 = __webpack_require__(/*! ../components/Page2 */ 219);
 	
 	var _Page4 = _interopRequireDefault(_Page3);
 	
-	var _NotFound = __webpack_require__(/*! ../components/NotFound */ 224);
+	var _NotFound = __webpack_require__(/*! ../components/NotFound */ 220);
 	
 	var _NotFound2 = _interopRequireDefault(_NotFound);
 	
-	var _DefaultPage = __webpack_require__(/*! ../components/DefaultPage */ 223);
+	var _DefaultPage = __webpack_require__(/*! ../components/DefaultPage */ 221);
 	
 	var _DefaultPage2 = _interopRequireDefault(_DefaultPage);
 	
@@ -25440,6 +25440,8 @@
 		value: true
 	});
 	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
 	var _react = __webpack_require__(/*! react */ 1);
 	
 	var _react2 = _interopRequireDefault(_react);
@@ -25448,81 +25450,151 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	exports.default = function (_ref) {
-		var children = _ref.children;
-		return _react2.default.createElement(
-			"div",
-			{ className: "main-container" },
-			_react2.default.createElement(
-				"h1",
-				null,
-				"React Prototype"
-			),
-			_react2.default.createElement(
-				"nav",
-				{ className: "navbar navbar-default", role: "navigation" },
-				_react2.default.createElement(
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Main = function (_React$Component) {
+		_inherits(Main, _React$Component);
+	
+		// getDefaultProps() {
+		// 	console.info("Step 1 (invoked once) => GetDefaultProps");
+		// }
+		// getInitialState() {
+		// 	console.info("Step 2 (invoked once) => GetInitialState");
+		// 	return { text: "" };
+		// }
+	
+		function Main(props) {
+			_classCallCheck(this, Main);
+	
+			var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Main).call(this, props));
+	
+			_this.state = { test: 1 };
+			return _this;
+		}
+	
+		_createClass(Main, [{
+			key: "componentWillMount",
+			value: function componentWillMount() {
+				console.info("Step 3 (invoked once) => ComponentWillMount");
+			}
+		}, {
+			key: "render",
+			value: function render() {
+				console.info("Step 4 (invoked multiple times) => Render");
+				return _react2.default.createElement(
 					"div",
-					{ className: "col-sm-7 col-sm-offset-2" },
+					{ className: "main-container" },
 					_react2.default.createElement(
-						"li",
+						"h1",
 						null,
-						_react2.default.createElement(
-							_reactRouter.Link,
-							{ to: "/page1" },
-							"page1"
-						)
+						"React Prototype"
 					),
 					_react2.default.createElement(
-						"li",
-						null,
+						"nav",
+						{ className: "navbar navbar-default", role: "navigation" },
 						_react2.default.createElement(
-							_reactRouter.Link,
-							{ to: "/page2" },
-							"page2"
+							"div",
+							{ className: "col-sm-7 col-sm-offset-2" },
+							_react2.default.createElement(
+								"li",
+								null,
+								_react2.default.createElement(
+									_reactRouter.Link,
+									{ to: "/page1" },
+									"page1"
+								)
+							),
+							_react2.default.createElement(
+								"li",
+								null,
+								_react2.default.createElement(
+									_reactRouter.Link,
+									{ to: "/page2" },
+									"page2"
+								)
+							)
 						)
-					)
-				)
-			),
-			children
-		);
+					),
+					this.props.children
+				);
+			}
+		}, {
+			key: "componentDidMount",
+			value: function componentDidMount() {
+				console.info("Step 5 (invoked once) => ComponentDidMount");
+			}
+		}, {
+			key: "componentWillUnmount",
+			value: function componentWillUnmount() {
+				console.info("Step 6 (invoked once) => ComponentWillUnmount");
+			}
+		}, {
+			key: "componentWillReceiveProps",
+			value: function componentWillReceiveProps(nextProps) {
+				console.log("Step 1 (invoked multiple times) => ComponentWillReceiveProps");
+				console.log(nextProps);
+			}
+		}, {
+			key: "shouldComponentUpdate",
+			value: function shouldComponentUpdate(nextProps, nextState) {
+				console.log("Step 2 (invoked multiple times) => ShouldComponentUpdate");
+				return true;
+			}
+		}, {
+			key: "componentWillUpdate",
+			value: function componentWillUpdate(nextProps, nextState) {
+				console.log("Step 3 (invoked multiple times) => ComponentWillUpdate");
+				console.log("nextProps:");
+				console.log(nextProps);
+				console.log("nextState:");
+				console.log(nextState);
+			}
+		}, {
+			key: "componentDidUpdate",
+			value: function componentDidUpdate(previousProps, previousState) {
+				console.log("Step 5 (invoked multiple times) => ComponentDidUpdate");
+				console.log("previousProps:");
+				console.log(previousProps);
+				console.log("previousState:");
+				console.log(previousState);
+			}
+		}]);
+	
+		return Main;
+	}(_react2.default.Component);
+	
+	Main.propTypes = {
+		title: _react.PropTypes.string.isRequired,
+		price: _react.PropTypes.number.isRequired,
+		initialQty: _react.PropTypes.number
 	};
+	Main.defaultProps = {
+		title: 'Undefined Product',
+		price: 100,
+		initialQty: 0
+	};
+	
+	exports.default = Main;
+	
+	// export default ( { children } )  => (
+	// 	<div className="main-container">
+	// 		<h1>React Prototype</h1>
+	// 		<nav className="navbar navbar-default" role="navigation">
+	// 			<div className="col-sm-7 col-sm-offset-2">
+	// 				<li><Link to="/page1">page1</Link></li>
+	// 		  		<li><Link to="/page2">page2</Link></li>
+	// 			</div>
+	// 		</nav>
+	// 		{children}
+	// 	</div>
+	// )
 
 /***/ },
-/* 218 */,
-/* 219 */,
-/* 220 */
-/*!**********************************!*\
-  !*** ./app/components/Footer.js ***!
-  \**********************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	
-	var _react = __webpack_require__(/*! react */ 1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	exports.default = function () {
-		return _react2.default.createElement(
-			"blockquote",
-			null,
-			_react2.default.createElement(
-				"p",
-				null,
-				"여기는 footer 영역입니다."
-			)
-		);
-	};
-
-/***/ },
-/* 221 */
+/* 218 */
 /*!*********************************!*\
   !*** ./app/components/Page1.js ***!
   \*********************************/
@@ -25549,7 +25621,7 @@
 	};
 
 /***/ },
-/* 222 */
+/* 219 */
 /*!*********************************!*\
   !*** ./app/components/Page2.js ***!
   \*********************************/
@@ -25576,7 +25648,34 @@
 	};
 
 /***/ },
-/* 223 */
+/* 220 */
+/*!************************************!*\
+  !*** ./app/components/NotFound.js ***!
+  \************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = function () {
+		return _react2.default.createElement(
+			"div",
+			null,
+			"Not Found Page"
+		);
+	};
+
+/***/ },
+/* 221 */
 /*!***************************************!*\
   !*** ./app/components/DefaultPage.js ***!
   \***************************************/
@@ -25603,10 +25702,10 @@
 	};
 
 /***/ },
-/* 224 */
-/*!************************************!*\
-  !*** ./app/components/NotFound.js ***!
-  \************************************/
+/* 222 */
+/*!**********************************!*\
+  !*** ./app/components/Footer.js ***!
+  \**********************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -25623,9 +25722,13 @@
 	
 	exports.default = function () {
 		return _react2.default.createElement(
-			"div",
+			"blockquote",
 			null,
-			"Not Found Page"
+			_react2.default.createElement(
+				"p",
+				null,
+				"여기는 footer 영역입니다."
+			)
 		);
 	};
 
