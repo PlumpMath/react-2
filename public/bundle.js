@@ -25456,42 +25456,55 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
+	// ES6 방식
+	
 	var Main = function (_React$Component) {
 		_inherits(Main, _React$Component);
-	
-		// getDefaultProps() {
-		// 	console.info("Step 1 (invoked once) => GetDefaultProps");
-		// }
-		// getInitialState() {
-		// 	console.info("Step 2 (invoked once) => GetInitialState");
-		// 	return { text: "" };
-		// }
 	
 		function Main(props) {
 			_classCallCheck(this, Main);
 	
 			var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Main).call(this, props));
 	
-			_this.state = { test: 1 };
+			_this.state = {
+				message: "이 페이지는 react의 기능을 확인하기 위한 프로토타입 페이지입니다.",
+				name: "Main"
+			};
 			return _this;
 		}
 	
 		_createClass(Main, [{
 			key: "componentWillMount",
 			value: function componentWillMount() {
-				console.info("Step 3 (invoked once) => ComponentWillMount");
+				console.info("[invoked once] => ComponentWillMount");
 			}
 		}, {
 			key: "render",
 			value: function render() {
-				console.info("Step 4 (invoked multiple times) => Render");
+				console.warn("[invoked multiple times] => Render");
+				var list = this.props.pagelist.map(function (v, i) {
+					return _react2.default.createElement(
+						"li",
+						{ key: i },
+						_react2.default.createElement(
+							_reactRouter.Link,
+							{ to: v.url },
+							v.text
+						)
+					);
+				});
 				return _react2.default.createElement(
 					"div",
 					{ className: "main-container" },
 					_react2.default.createElement(
 						"h1",
 						null,
-						"React Prototype"
+						this.props.title
+					),
+					_react2.default.createElement(
+						"p",
+						null,
+						this.state.message
 					),
 					_react2.default.createElement(
 						"nav",
@@ -25499,24 +25512,7 @@
 						_react2.default.createElement(
 							"div",
 							{ className: "col-sm-7 col-sm-offset-2" },
-							_react2.default.createElement(
-								"li",
-								null,
-								_react2.default.createElement(
-									_reactRouter.Link,
-									{ to: "/page1" },
-									"page1"
-								)
-							),
-							_react2.default.createElement(
-								"li",
-								null,
-								_react2.default.createElement(
-									_reactRouter.Link,
-									{ to: "/page2" },
-									"page2"
-								)
-							)
+							list
 						)
 					),
 					this.props.children
@@ -25525,73 +25521,156 @@
 		}, {
 			key: "componentDidMount",
 			value: function componentDidMount() {
-				console.info("Step 5 (invoked once) => ComponentDidMount");
+				console.info("[invoked once] => ComponentDidMount");
 			}
 		}, {
 			key: "componentWillUnmount",
 			value: function componentWillUnmount() {
-				console.info("Step 6 (invoked once) => ComponentWillUnmount");
+				console.info("[invoked once] => ComponentWillUnmount");
 			}
 		}, {
 			key: "componentWillReceiveProps",
 			value: function componentWillReceiveProps(nextProps) {
-				console.log("Step 1 (invoked multiple times) => ComponentWillReceiveProps");
-				console.log(nextProps);
+				console.log("Step 1 => ComponentWillReceiveProps", nextProps);
 			}
 		}, {
 			key: "shouldComponentUpdate",
 			value: function shouldComponentUpdate(nextProps, nextState) {
-				console.log("Step 2 (invoked multiple times) => ShouldComponentUpdate");
+				console.log("Step 2 => ShouldComponentUpdate");
 				return true;
 			}
 		}, {
 			key: "componentWillUpdate",
 			value: function componentWillUpdate(nextProps, nextState) {
-				console.log("Step 3 (invoked multiple times) => ComponentWillUpdate");
-				console.log("nextProps:");
-				console.log(nextProps);
-				console.log("nextState:");
-				console.log(nextState);
+				console.log("Step 3 => ComponentWillUpdate", "nextProps:", nextProps, "nextState:", nextState);
 			}
 		}, {
 			key: "componentDidUpdate",
 			value: function componentDidUpdate(previousProps, previousState) {
-				console.log("Step 5 (invoked multiple times) => ComponentDidUpdate");
-				console.log("previousProps:");
-				console.log(previousProps);
-				console.log("previousState:");
-				console.log(previousState);
+				console.log("Step 4 => ComponentDidUpdate", "previousProps:", previousProps, "previousState:", previousState);
 			}
 		}]);
 	
 		return Main;
 	}(_react2.default.Component);
 	
+	Main.defaultProps = {
+		title: "React prototype (props 테스트)",
+		pagelist: [{
+			url: "/page1",
+			text: "페이지1로 이동"
+		}, {
+			url: "/page2",
+			text: "페이지2로 이동"
+		}]
+	};
 	Main.propTypes = {
 		title: _react.PropTypes.string.isRequired,
-		price: _react.PropTypes.number.isRequired,
-		initialQty: _react.PropTypes.number
+		pagelist: _react.PropTypes.array
 	};
-	Main.defaultProps = {
-		title: 'Undefined Product',
-		price: 100,
-		initialQty: 0
-	};
+	
+	// ES5 방식
+	// var Main = React.createClass({
+	// 	propTypes: {
+	// 	    title: PropTypes.string.isRequired,
+	// 	    pagelist: PropTypes.array
+	// 	},
+	// 	getDefaultProps:function() {
+	// 		console.info("[invoked once] => GetDefaultProps");
+	// 		return {
+	// 		    title: "React prototype (테스트)",
+	// 		    pagelist: [{
+	// 		    	url : "/page1",
+	// 		    	text : "페이지1로 이동"
+	// 		    }, {
+	// 		    	url : "/page2",
+	// 		    	text : "페이지2로 이동"
+	// 		    }]
+	// 		};
+	// 	},
+	// 	getInitialState:function() {
+	// 		console.info("[invoked once] => GetInitialState");
+	// 		return {
+	// 	   		message: "이 페이지는 react의 기능을 확인하기 위한 프로토타입 페이지입니다.",
+	//	   		name : "Main"
+	// 	   	};
+	//     },
+	// 	componentWillMount:function() {
+	// 		console.info("[invoked once] => ComponentWillMount");
+	// 	},
+	// 	render:function() {
+	// 		console.warn("[invoked multiple times] => Render");
+	// 		var list = this.props.pagelist.map((v, i) => {
+	// 			return <li key={i}><Link to={v.url}>{v.text}</Link></li>
+	// 		});
+	// 		return (
+	// 			<div className="main-container">
+	// 				<h1>{this.props.title}</h1>
+	// 				<p>{this.state.message}</p>
+	// 				<nav className="navbar navbar-default" role="navigation">
+	// 					<div className="col-sm-7 col-sm-offset-2">
+	// 						{list}
+	// 					</div>
+	// 				</nav>
+	// 				{this.props.children}
+	// 			</div>
+	// 		);
+	// 	},
+	// 	componentDidMount:function() {
+	// 		console.info("[invoked once] => ComponentDidMount");
+	// 	},
+	// 	componentWillUnmount:function() {
+	// 		console.info("[invoked once] => ComponentWillUnmount");
+	// 	},
+	// 	componentWillReceiveProps:function(nextProps) {
+	// 		console.log("Step 1 => ComponentWillReceiveProps", nextProps);
+	// 	},
+	// 	shouldComponentUpdate:function(nextProps, nextState) {
+	// 		console.log("Step 2 => ShouldComponentUpdate");
+	// 		return true;
+	// 	},
+	// 	componentWillUpdate:function(nextProps, nextState) {
+	// 		console.log("Step 3 => ComponentWillUpdate", "nextProps:",nextProps,"nextState:",nextState);
+	// 	},
+	// 	componentDidUpdate:function(previousProps, previousState) {
+	// 		console.log("Step 4 => ComponentDidUpdate", "previousProps:",previousProps,"previousState:",previousState);
+	// 	}
+	// });
+	
+	// Stateless Functional Components
+	// var Main = ({ title, pagelist, children })  => {
+	// 	var list = pagelist.map((v, i) => {
+	// 		return <li key={i}><Link to={v.url}>{v.text}</Link></li>
+	// 	})
+	// 	return (
+	// 		<div className="main-container">
+	// 			<h1>{title}</h1>
+	// 			<nav className="navbar navbar-default" role="navigation">
+	// 				<div className="col-sm-7 col-sm-offset-2">
+	// 					{list}
+	// 				</div>
+	// 			</nav>
+	// 			{children}
+	// 		</div>
+	// 	);
+	// };
+	
+	// Main.defaultProps = {
+	//     title: "React prototype (props 테스트)",
+	//     pagelist: [{
+	//     	url : "/page1",
+	//     	text : "페이지1로 이동"
+	//     }, {
+	//     	url : "/page2",
+	//     	text : "페이지2로 이동"
+	//     }]
+	// };
+	// Main.propTypes = {
+	//     title: PropTypes.string.isRequired,
+	//     pagelist: PropTypes.array
+	// };
 	
 	exports.default = Main;
-	
-	// export default ( { children } )  => (
-	// 	<div className="main-container">
-	// 		<h1>React Prototype</h1>
-	// 		<nav className="navbar navbar-default" role="navigation">
-	// 			<div className="col-sm-7 col-sm-offset-2">
-	// 				<li><Link to="/page1">page1</Link></li>
-	// 		  		<li><Link to="/page2">page2</Link></li>
-	// 			</div>
-	// 		</nav>
-	// 		{children}
-	// 	</div>
-	// )
 
 /***/ },
 /* 218 */
