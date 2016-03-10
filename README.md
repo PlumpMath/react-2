@@ -2,7 +2,7 @@
 
 See [Wiki](https://github.com/studye/react/wiki) pages.
 
-* [React 빌드](https://github.com/studye/react/wiki/React-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0) 송효종
+[React 빌드](https://github.com/studye/react/wiki/React-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0) 송효종
 
 #### day01 
 * [React Life Cycle](https://github.com/studye/react/wiki/React-Life-Cycle) 손찬욱  
