@@ -9,24 +9,24 @@ React 맛보기. 그리고 React Component의 life cycle 알아보기
 
 #### day02 - [Charter 01 Getting Started] 이현철
 
-#### day03 - [Charter 02 Inside the DOM Abstraction] 김지한
+#### day02 - [Charter 02 Inside the DOM Abstraction] 김지한
 
-#### day04 - [Charter 03 Architecting Applications with Components] 손찬욱
+#### day02 - [Charter 03 Architecting Applications with Components] 손찬욱
 
-#### day05 - [Charter 04 Sophisticated Interactions] 윤종문
+#### day03 - [Charter 04 Sophisticated Interactions] 윤종문
 
-#### day06 - [Charter 05 Routing] 김상욱
+#### day03 - [Charter 05 Routing] 김상욱
 
-#### day07 - [Charter 06 Architecting React Applications with Flux] 현성식
+#### day04 - [Charter 06 Architecting React Applications with Flux] 현성식
 
-#### day08 - [Charter 07 Performance Tuning] 손찬욱
+#### day05 - [Charter 07 Performance Tuning] 손찬욱
 
-#### day09 - [Charter 08 Isomorphic React Applications] 김병관
+#### day06 - [Charter 08 Isomorphic React Applications] 김병관
 
-#### day10 - [Charter 09 Testing React Components] 송효종
+#### day06 - [Charter 09 Testing React Components] 송효종
 
-#### day11 - [Addon] 이현철
+#### day07 - [Addon] 이현철
 
-#### day12 - ...
+#### day08 - ...
 
 #### project를 만들어 보는 건 어떨까?...
