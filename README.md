@@ -2,30 +2,34 @@
 
 See [Wiki](https://github.com/studye/react/wiki) pages.
 
-#### day00 - [React 빌드](https://github.com/studye/react/wiki/React-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0) 송효종
+#### day00    
+* [React 빌드](https://github.com/studye/react/wiki/React-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0) 송효종
 
-#### day01 - [React Life Cycle](https://github.com/studye/react/wiki/React-Life-Cycle) 손찬욱
-React 맛보기. 그리고 React Component의 life cycle 알아보기
+#### day01 
+* [React Life Cycle](https://github.com/studye/react/wiki/React-Life-Cycle) 손찬욱  
+  * React 맛보기. 그리고 React Component의 life cycle 알아보기
 
-#### day02 - [Charter 01 Getting Started] 이현철
+#### day02 
+* [Charter 01 Getting Started] 이현철
+* [Charter 02 Inside the DOM Abstraction] 김지한
+* [Charter 03 Architecting Applications with Components] 손찬욱
 
-#### day02 - [Charter 02 Inside the DOM Abstraction] 김지한
+#### day03 
+* [Charter 04 Sophisticated Interactions] 윤종문
+* [Charter 05 Routing] 김상욱
 
-#### day02 - [Charter 03 Architecting Applications with Components] 손찬욱
+#### day04 
+* [Charter 06 Architecting React Applications with Flux] 현성식
 
-#### day03 - [Charter 04 Sophisticated Interactions] 윤종문
+#### day05 
+* [Charter 07 Performance Tuning] 손찬욱
 
-#### day03 - [Charter 05 Routing] 김상욱
+#### day06 
+* [Charter 08 Isomorphic React Applications] 김병관
+* [Charter 09 Testing React Components] 송효종
 
-#### day04 - [Charter 06 Architecting React Applications with Flux] 현성식
-
-#### day05 - [Charter 07 Performance Tuning] 손찬욱
-
-#### day06 - [Charter 08 Isomorphic React Applications] 김병관
-
-#### day06 - [Charter 09 Testing React Components] 송효종
-
-#### day07 - [Addon] 이현철
+#### day07
+* [Addon] 이현철
 
 #### day08 - ...
 
