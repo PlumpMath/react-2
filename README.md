@@ -23,11 +23,11 @@ See [Wiki](https://github.com/studye/react/wiki) pages.
 #### day05 
 * [Charter 07 Performance Tuning] 손찬욱
 * [Charter 08 Isomorphic React Applications] 김병관
-* 
+
 #### day06 
 * [Charter 09 Testing React Components] 송효종
 * [Addon] 이현철
-* 
+ 
 #### day07
 
 
