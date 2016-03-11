@@ -9,7 +9,7 @@ See [Wiki](https://github.com/studye/react/wiki) pages.
   * React 맛보기. 그리고 React Component의 life cycle 알아보기
 
 #### day02 
-* [Charter 01 Getting Started](https://github.com/studye/react/wiki/%5BCharter-01-Getting-Started%5D) 이현철
+* [[Charter 01 Getting Started]](https://github.com/studye/react/wiki/%5BCharter-01-Getting-Started%5D) 이현철
 * [Charter 02 Inside the DOM Abstraction] 김지한
 * [Charter 03 Architecting Applications with Components] 손찬욱
 
