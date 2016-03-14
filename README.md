@@ -11,7 +11,7 @@ See [Wiki](https://github.com/studye/react/wiki) pages.
 #### day02 
 * [[Charter 01 Getting Started]](https://github.com/studye/react/wiki/%5BCharter-01-Getting-Started%5D) 이현철
 * [Charter 02 Inside the DOM Abstraction] 김지한
-* [Charter 03 Architecting Applications with Components] 손찬욱
+* [Charter 03 Architecting Applications with Components](https://github.com/studye/react/wiki/%5BChapter-3-Architecting-Applications-with-Components%5D) 손찬욱
 
 #### day03 
 * [Charter 04 Sophisticated Interactions] 윤종문
