@@ -12,6 +12,7 @@ See [Wiki](https://github.com/studye/react/wiki) pages.
 * [[Charter 01 Getting Started]](https://github.com/studye/react/wiki/%5BCharter-01-Getting-Started%5D) 이현철
 * [[Charter 02 Inside the DOM Abstraction]](https://github.com/studye/react/wiki/%5BCharter-02-Inside-the-DOM-Abstraction%5D) 김지한
 * [[Charter 03 Architecting Applications with Components]](https://github.com/studye/react/wiki/%5BChapter-3-Architecting-Applications-with-Components%5D) 손찬욱
+  * Immnutable.js 동작방식? 
 
 #### day03 
 * [Charter 04 Sophisticated Interactions] 윤종문
@@ -22,6 +23,7 @@ See [Wiki](https://github.com/studye/react/wiki) pages.
 
 #### day05 
 * [Charter 07 Performance Tuning] 손찬욱
+ * 비교 알고리즘  
 * [Charter 08 Isomorphic React Applications] 김병관
 
 #### day06 
