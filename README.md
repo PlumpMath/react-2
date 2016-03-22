@@ -16,7 +16,7 @@ See [Wiki](https://github.com/studye/react/wiki) pages.
 
 #### day03 
 * [Charter 04 Sophisticated Interactions] 윤종문
-* [Charter 05 Routing] 김상욱
+* [[Charter 05 Routing]](https://github.com/sangwook-kim/pro-react-study/blob/master/routing/readme.md) 김상욱
 
 #### day04 
 * [Charter 06 Architecting React Applications with Flux] 현성식
