@@ -15,7 +15,7 @@ See [Wiki](https://github.com/studye/react/wiki) pages.
   * Immnutable.js 동작방식? 
 
 #### day03 
-* [Charter 04 Sophisticated Interactions](https://github.com/studye/react/wiki/Charter-04-Sophisticated-Interactions) 윤종문
+* [[Charter 04 Sophisticated Interactions]](https://github.com/studye/react/wiki/Charter-04-Sophisticated-Interactions) 윤종문
 * [[Charter 05 Routing]](https://github.com/sangwook-kim/pro-react-study/blob/master/routing/readme.md) 김상욱
 
 #### day04 
