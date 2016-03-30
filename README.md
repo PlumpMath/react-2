@@ -18,7 +18,7 @@ See [Wiki](https://github.com/studye/react/wiki) pages.
 * [[Chapter 05 Routing]](https://github.com/sangwook-kim/pro-react-study/blob/master/routing/readme.md) 김상욱
 
 #### day04 
-* [[Charter 06 Architecting React Applications with Flux](https://github.com/studye/react/wiki/Charter-06-Architecting-React-Applications-with-Flux)] 현성식
+* [[Chapter 06 Architecting React Applications with Flux](https://github.com/studye/react/wiki/Charter-06-Architecting-React-Applications-with-Flux)] 현성식
 
 #### day05 
 * [Chapter 07 Performance Tuning] 손찬욱
