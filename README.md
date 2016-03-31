@@ -21,8 +21,7 @@ See [Wiki](https://github.com/studye/react/wiki) pages.
 * [[Chapter 06 Architecting React Applications with Flux](https://github.com/studye/react/wiki/Charter-06-Architecting-React-Applications-with-Flux)] 현성식
 
 #### day05 
-* [Chapter 07 Performance Tuning] 손찬욱
- * 비교 알고리즘  
+* [[Chapter 07 Performance Tuning](https://github.com/studye/react/wiki/Chapter-7-Performance-Tunning)] 손찬욱
 * [Chapter 08 Isomorphic React Applications] 김병관
 
 #### day06
