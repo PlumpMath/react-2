@@ -27,7 +27,7 @@ class ContactsApp extends React.Component {
 }
 ContactsApp.propTypes = {
   contacts: React.PropTypes.arrayOf(React.PropTypes.object)
-}
+};
 
 
 
