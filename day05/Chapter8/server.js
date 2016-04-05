@@ -37,7 +37,7 @@ let renderRoute = (response, renderProps) => {
         });
     } else {
         response.render('index', {
-            reactInitialData: null,
+            reactInitialData: '',
             content: renderToString(<RouterContext {...renderProps} />)
         });
     }
