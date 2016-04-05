@@ -1,4 +1,5 @@
 import React, {Component, PropTypes} from 'react';
+import fetch from 'isomorphic-fetch';
 import ContactList from './ContactList';
 import SearchBar from './SearchBar';
 
@@ -8,6 +9,14 @@ class ContactsApp extends React.Component {
     this.state={
       filterText: ''
     };
+  }
+
+  componentDidMount() {
+    if(!this.props.contacts) {
+      ContactsApp.requestInitialData().then(contacts => {
+          this.setState({ contacts });
+      });
+    }
   }
 
   handleUserInput(searchTerm){
@@ -29,6 +38,8 @@ ContactsApp.propTypes = {
   contacts: React.PropTypes.arrayOf(React.PropTypes.object)
 };
 
-
+ContactsApp.requestInitialData = () => {
+    return fetch('http://localhost:3000/contacts.json').then((response) => response.json());
+};
 
 export default ContactsApp;
