@@ -13,9 +13,7 @@ class ContactsApp extends React.Component {
     }
 
     componentDidMount() {
-        if (this.props.contacts && this.props.contacts.length > 0) {
-            this.setState({contacts: this.props.contacts});
-        } else {
+        if (!this.props.contacts || this.props.contacts.length === 0) {
             ContactsApp.requestInitialData().then(contacts => {
                 this.setState({contacts});
             });
@@ -31,7 +29,7 @@ class ContactsApp extends React.Component {
             <div>
                 <SearchBar filterText={this.state.filterText}
                     onUserInput={this.handleUserInput.bind(this)} />
-                <ContactList contacts={this.state.contacts}
+                <ContactList contacts={this.props.contacts || this.state.contacts}
                     filterText={this.state.filterText}/>
             </div>
         )
