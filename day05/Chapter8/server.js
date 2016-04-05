@@ -1,5 +1,8 @@
 import fs from 'fs';
 import express from 'express';
+import React from 'react';
+import { renderToString } from 'react-dom/server';
+import ContactsApp from './components/ContactsApp';
 
 const app = express();
 
@@ -9,9 +12,12 @@ app.use(express.static(__dirname + '/public'));
 
 const contacts = JSON.parse(fs.readFileSync('./contacts.json', 'utf8'));
 
+const ContactsAppFactory = React.createFactory(ContactsApp);
+
 app.get('/', (request, response) => {
+  let componentInstance = ContactsAppFactory({contacts: contacts});
   response.render('index',{
-    content: 'Hello'
+    content: renderToString(componentInstance)
   });
 });
 
