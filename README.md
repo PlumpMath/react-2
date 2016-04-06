@@ -22,7 +22,7 @@ See [Wiki](https://github.com/studye/react/wiki) pages.
 
 #### day05 
 * [[Chapter 7 Performance Tuning]](https://github.com/studye/react/wiki/%5BChapter-7-Performance-Tunning%5D) 손찬욱
-* [[Chapter 8 Isomorphic React Applications]](https://github.com/studye/react/wiki/Chapter-08-Isomorphic-React-Applications)  김병관
+* [[Chapter 8 Isomorphic React Applications]](https://github.com/studye/react/wiki/%5BChapter-8-Isomorphic-React-Applications%5D)  김병관
 
 #### day06
 * [About Redux]
