@@ -9,10 +9,10 @@ describe('CheckboxWithLabel', () => {
     const shallowRenderer = TestUtils.createRenderer();
     shallowRenderer.render( <CheckboxWithLabel labelOn="On" labelOff="Off"/> );
     const checkbox  = shallowRenderer.getRenderOutput();
-    console.log( typeof checkbox );
-    console.log("---------------");
-    console.log( checkbox );
-    console.log("---------------");
+    // console.log( typeof checkbox );
+    // console.log("---------------");
+    // console.log( checkbox );
+    // console.log("---------------");
 
     // var checkbox = TestUtils.renderIntoDocument(
     //     <CheckboxWithLabel labelOn="On" labelOff="Off"/>
