@@ -26,12 +26,19 @@ See [Wiki](https://github.com/studye/react/wiki) pages.
 
 #### day06
 * [About Redux]
+ * [Redux로의 카툰 안내서](http://bestalign.github.io/2015/10/26/cartoon-intro-to-redux/)
 
 #### day07 
 * [[Chapter 9 Testing React Components]](https://github.com/studye/react/wiki/%5BChapter-9-Testing-React-Components%5D) 송효종
 * [Addon & Immutability.js] 이현철
  
-#### day08
-
 
 #### project를 만들어 보는 건 어떨까?...
+
+#### 강좌 
+ * https://www.udemy.com/reactjs-and-flux-learn-by-building-10-projects/
+
+#### React native
+* [React Native book](https://www.packtpub.com/application-development/getting-started-react-native)
+* https://www.smashingmagazine.com/2016/04/the-beauty-of-react-native-building-your-first-ios-app-with-javascript-part-1/
+* https://www.smashingmagazine.com/2016/04/how-to-build-your-first-ios-app-with-javascript/
