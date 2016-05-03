@@ -30,7 +30,7 @@ See [Wiki](https://github.com/studye/react/wiki) pages.
 
 #### day07 
 * [[Chapter 9 Testing React Components]](https://github.com/studye/react/wiki/%5BChapter-9-Testing-React-Components%5D) 송효종
-* [[Addon & Immutability.js]](https://github.com/studye/react/wiki/%5BAddon-&-Immutability.js%5D) 이현철
+* [[Addon & Immutable.js]](https://github.com/studye/react/wiki/%5BAddon-&-Immutable.js%5D) 이현철
  
 
 #### project를 만들어 보는 건 어떨까?...
