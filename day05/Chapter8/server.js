@@ -1,7 +1,7 @@
 import fs from 'fs';
 import express from 'express';
 import React from 'react';
-import { renderToString } from 'react-dom/server';
+import { renderToString, renderToStaticMarkup } from 'react-dom/server';
 import ContactsApp from './components/ContactsApp';
 import { match, RouterContext } from 'react-router';
 import routes from './routes';
@@ -32,13 +32,13 @@ let renderRoute = (response, renderProps) => {
             );
             response.render('index', {
                 reactInitialData: JSON.stringify(data),
-                content: renderToString(<RouterContext createElement={handleCreateElement} {...renderProps} />)
+                content: renderToStaticMarkup(<RouterContext createElement={handleCreateElement} {...renderProps} />)
             });
         });
     } else {
         response.render('index', {
             reactInitialData: '',
-            content: renderToString(<RouterContext {...renderProps} />)
+            content: renderToStaticMarkup(<RouterContext {...renderProps} />)
         });
     }
 };
